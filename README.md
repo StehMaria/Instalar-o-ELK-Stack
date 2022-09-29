@@ -25,7 +25,9 @@ Para fazer a instalação do Elasticsearch no Ubuntu Server:
 
 1 - execute o comando para importar a chave GPG pública do Elasticsearch para o APT:
 
-```wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -```
+```
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+```
 
 2 - Atualize os pacotes e execute o comando para instalar o transport-https:
 
