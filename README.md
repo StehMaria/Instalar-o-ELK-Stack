@@ -81,7 +81,7 @@ sudo /bin/systemctl enable elasticsearch.service
 sudo systemctl start elasticsearch.service
 ```
 
-## Para fazer a instalação do Kibana:
+## Instalação do Kibana:
 
 1 – Atualize os pacotes:
 
