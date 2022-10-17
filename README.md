@@ -44,13 +44,13 @@ echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee 
 4 – Atualize a lista de pacotes para que o APT:
 
 ```
-sudo apt-get update
+sudo apt update
 ```
 
 5 – Instale o Elasticsearch:
 
 ```
-sudo apt-get install elasticsearch
+sudo apt install elasticsearch
 ```
 
 6 – Faça algumas alterações no arquivo abaixo, descomentando as seguintes linhas:
@@ -75,24 +75,25 @@ nano /etc/elasticsearch/elasticsearch.yml
 sudo /bin/systemctl daemon-reload
 ```
 ```
-sudo /bin/systemctl enable elasticsearch.service
+sudo /bin/systemctl start elasticsearch.service
 ```
 ```
-sudo systemctl start elasticsearch.service
+sudo systemctl enable elasticsearch.service
 ```
+ver status e curl
 
 ## Instalação do Kibana:
 
 1 – Atualize os pacotes:
 
 ```
-sudo apt-get update
+sudo apt update
 ```
 
 2 – Instale o kibana
 
 ```
-sudo apt-get install kibana
+sudo apt install kibana
 ```
 
 3 – Realize as alterações no arquivo abaixo:
@@ -113,17 +114,18 @@ nano /etc/kibana/kibana.yml
 sudo /bin/systemctl daemon-reload
 ```
 ```
-sudo /bin/systemctl enable kibana.service
+sudo /bin/systemctl start kibana.service
 ```
 ```
-sudo systemctl start kibana.service
+sudo systemctl enable kibana.service
 ```
+status
 ## Instalação do Logstach
 
 1 – Instale o Logstash:
 
 ```
-sudo apt-get install logstash
+sudo apt install logstash
 ```
 
 2 – Entra na pasta e inicia o serviço:
@@ -131,11 +133,13 @@ sudo apt-get install logstash
 ```
 cd /etc/logstash/
 ```
+relod
 ```
-sudo /bin/systemctl enable logstash
+sudo /bin/systemctl start logstash
 ```
 ```
-sudo systemctl start logstash
+sudo systemctl enable logstash
 ```
-
+status
+executar um script (fazer)
 
