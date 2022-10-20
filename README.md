@@ -38,7 +38,7 @@ sudo apt-get install apt-transport-https
 3 - Adicione a lista de origens da Elastic ao diretório sources.list.d, onde o APT irá procurar por novas origens:
 
 ```
-echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.list
+echo "deb https://artifacts.elastic.co/packages/8.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-8.x.list
 ```
 
 4 – Atualize a lista de pacotes para que o APT:
@@ -80,7 +80,12 @@ sudo /bin/systemctl start elasticsearch.service
 ```
 sudo systemctl enable elasticsearch.service
 ```
-ver status e curl
+```
+sudo systemctl status elasticsearch
+```
+```
+curl -X GET "http:localhost:9200"
+```
 
 ## Instalação do Kibana:
 
@@ -119,7 +124,9 @@ sudo /bin/systemctl start kibana.service
 ```
 sudo systemctl enable kibana.service
 ```
-status
+```
+sudo systemctl status kibana
+```
 ## Instalação do Logstach
 
 1 – Instale o Logstash:
@@ -140,6 +147,15 @@ sudo /bin/systemctl start logstash
 ```
 sudo systemctl enable logstash
 ```
-status
-executar um script (fazer)
+```
+sudo systemctl status logstash
+```
 
+## Para iniciar um script
+
+```
+cd /usr/share/logstash
+```
+```
+sudo /bin/logstash -f /etc/logstash/nome_do_arquivo.conf
+```
