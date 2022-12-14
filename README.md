@@ -140,7 +140,6 @@ sudo apt install logstash
 ```
 cd /etc/logstash/
 ```
-relod
 ```
 sudo /bin/systemctl start logstash
 ```
