@@ -133,7 +133,7 @@ sudo systemctl enable kibana.service
 ```
 sudo systemctl status kibana
 ```
-## Instalação do Logstach
+## Instalação do Logstash
 
 1 – Instale o Logstash:
 
@@ -157,12 +157,13 @@ sudo systemctl status logstash
 ```
 
 ## Para iniciar um script
-> Para que o ELK Stack funcione corretamente é necessário que o Java esteja instalado. Se houver algum erro relacionado ao Java, execute o comando a instalação na máquina:
+> Para que o ELK Stack funcione corretamente é necessário que o Java esteja instalado. Se houver algum erro relacionado ao Java, execute o comando para verificar a versão:
 ```
 java -version
 ```
-> Se houver uma mensagem se melhante a esta, será necessário instalar o JDK. Execute o comando abaixo:
-imagem aqui
+> Se houver uma mensagem semelhante a esta, será necessário instalar o JDK.   
+⚠️ Command 'java' not found, but can be installed  
+Execute o comando abaixo:  
 ```
 sudo apt install default-jre
 ```
