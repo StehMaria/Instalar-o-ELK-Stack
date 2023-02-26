@@ -4,7 +4,7 @@ Este tutorial mostra como fazer a instalação e configuração do ELK Stack em 
 
 O **ELK Stack** é uma ferramenta gratuita da Elastic com softwares para pesquisar, analisar e visualizar logs ajudando no monitoramento de equipamentos.
 
-Elasticsearch – Busca e analise, com ferramentas e filtros.
+Elasticsearch – Busca e analise de várias fontes.
 
 Logstash – Processador de dados com pipelines que recebe, transforma e envia dados simultâneos.
 
@@ -12,16 +12,17 @@ Kibana – Visualizar dados do Elasticsearch através de gráficos e dashboards.
 
 Beats – Agentes que envia dados coletados para o Logstash ou Elasticsearch.
 
+Para saber mais sobre o ELK Stack, acesse o [Elastic](https://www.elastic.co/pt/what-is/elasticsearch).
 
 # Pré - Requisitos
 
 Para utilizar o ELK Stack, vamos configurar uma máquina virtual com as seguintes configurações:
-- Ubuntu Server (v. 22.04)
+- [Ubuntu Server (v. 22.04)](https://ubuntu.com/download/server)
 - RAM: 6MB
 - 1 CPU
 > Para este passo é necessário que tenha um software para criação de máquinas virtuais instalado. No tutorial, utilizamos o VirtualBox. Para realizar a instalação do virtual box e para a criação da máquina virtual acesse os links abaixo:  
-link do virtual box para download  
-link da instalação do ubunto server  
+[VirtualBox](https://www.virtualbox.org/wiki/Downloads)  
+[Ubuntu Server]()  
 
 ## Instalação Elasticsearch
 
@@ -90,8 +91,7 @@ sudo systemctl status elasticsearch
 ```
 curl -X GET "http:localhost:9200"
 ```
-A saída apo´s este comando deve ser assim:
-imagem aqui
+
 
 ## Instalação do Kibana:
 
